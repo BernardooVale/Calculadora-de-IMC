@@ -63,7 +63,7 @@ class _paginaPrincipalState extends State<paginaPrincipal> {
       appBar: AppBar(
         title: const Text("Calculadora de IMC"),
         centerTitle: true,
-        backgroundColor: Colors.green,
+        backgroundColor: Color.fromRGBO(20, 125, 30, 100),
         actions: <Widget>[
           IconButton(onPressed: _reiniciaDados,
               icon: const Icon(Icons.refresh)),
@@ -71,12 +71,12 @@ class _paginaPrincipalState extends State<paginaPrincipal> {
       ),
       backgroundColor: Colors.black38,
       body: SingleChildScrollView(
-      padding: const EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 0.0),
+      padding: const EdgeInsets.fromLTRB(10.0, 25.0, 10.0, 0.0),
       child: Form(
       key: _formKey,
       child: Column(
         children: <Widget>[
-          const Icon(Icons.person_outline, size: 120.0, color: Colors.green,),
+          const Icon(Icons.person_outline, size: 120.0, color: Color.fromRGBO(20, 125, 30, 100)),
           TextFormField(
             keyboardType: TextInputType.number,
               inputFormatters: <TextInputFormatter>[
@@ -122,7 +122,7 @@ class _paginaPrincipalState extends State<paginaPrincipal> {
               }
           ),
           Padding(
-          padding: const EdgeInsets.only(top: 10.0, bottom: 10.0),
+          padding: const EdgeInsets.only(top: 20.0, bottom: 10.0),
             child: ElevatedButton(
             onPressed:(){
               if(_formKey.currentState!.validate()) {
@@ -130,16 +130,14 @@ class _paginaPrincipalState extends State<paginaPrincipal> {
               }
             },
             style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.green,
+              backgroundColor: Color.fromRGBO(20, 125, 30, 100),
               fixedSize: const Size(250, 50),
             ),
-            child: const Text("Resultado", style: TextStyle(color: Colors.white70,
-                                     fontSize: 25.0),
+            child: const Text("Resultado", style: TextStyle(color: Colors.white, fontSize: 25.0),
             ),
           ),
           ),
-            Text(_informacao, style: const TextStyle(color: Colors.white70,
-                fontSize: 25.0),
+            Text(_informacao, style: const TextStyle(color: Colors.white70, fontSize: 25.0),
           )
         ],
       ),
